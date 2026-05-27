@@ -1,14 +1,28 @@
 const hourHand = document.getElementById('hour-hand');
 const minuteHand = document.getElementById('minute-hand');
 const secondHand = document.getElementById('second-hand');
+const analogClock = document.querySelector('.analog-clock');
+
+for (let i = 1; i <= 12; i++) {
+    const numberContainer = document.createElement('div');
+    numberContainer.className = 'clock-number';
+    numberContainer.style.transform = `rotate(${i * 30}deg)`;
+    
+    const numberSpan = document.createElement('span');
+    numberSpan.textContent = i;
+    numberSpan.style.transform = `rotate(${-i * 30}deg)`;
+    
+    numberContainer.appendChild(numberSpan);
+    analogClock.appendChild(numberContainer);
+}
 
 function updateAnalogClock(now) {
     const seconds = now.getSeconds();
     const minutes = now.getMinutes();
     const hours = now.getHours();
 
-    const secondsDegrees = (seconds * 6);
-    const minutesDegrees = (minutes * 6) + (seconds * 0.1);
+    const secondsDegrees = (seconds * 6); 
+    const minutesDegrees = (minutes * 6) + (seconds * 0.1); 
     const hoursDegrees = ((hours % 12) * 30) + (minutes * 0.5); 
 
     secondHand.style.transform = `rotate(${secondsDegrees}deg)`;
@@ -18,7 +32,7 @@ function updateAnalogClock(now) {
 
 function updateClocks() {
     const now = new Date();
-
+    
     updateAnalogClock(now);
 
     const formatTime = (date, timeZone) => {
@@ -67,5 +81,4 @@ function updateClocks() {
 }
 
 updateClocks();
-
 setInterval(updateClocks, 1000);

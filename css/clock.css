@@ -59,6 +59,26 @@
     transition: background-color 0.3s ease;
 }
 
+.clock-number {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    padding-top: 12px;
+    box-sizing: border-box;
+    z-index: 0; 
+}
+
+.clock-number span {
+    display: block;
+    font-size: 1.3rem;
+    font-weight: bold;
+    font-family: 'Courier New', Courier, monospace;
+    color: var(--nav-text);
+    text-align: center;
+}
+
 .clock-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));

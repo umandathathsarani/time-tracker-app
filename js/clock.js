@@ -32,8 +32,20 @@ function updateClocks() {
 
     document.getElementById('tokyo-time').textContent = formatTime(now, 'Asia/Tokyo');
     document.getElementById('tokyo-date').textContent = formatDate(now, 'Asia/Tokyo');
+
+    document.getElementById('thailand-time').textContent = formatTime(now, 'Asia/Bangkok');
+    document.getElementById('thailand-date').textContent = formatDate(now, 'Asia/Bangkok');
+
+    document.getElementById('china-time').textContent = formatTime(now, 'Asia/Shanghai');
+    document.getElementById('china-date').textContent = formatDate(now, 'Asia/Shanghai');
+
+    document.getElementById('korea-time').textContent = formatTime(now, 'Asia/Seoul');
+    document.getElementById('korea-date').textContent = formatDate(now, 'Asia/Seoul');
+
+    document.getElementById('la-time').textContent = formatTime(now, 'America/Los_Angeles');
+    document.getElementById('la-date').textContent = formatDate(now, 'America/Los_Angeles');
 }
 
 updateClocks();
 
-setInterval(updateClocks, 10000);
+setInterval(updateClocks, 1000);

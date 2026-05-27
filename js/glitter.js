@@ -98,6 +98,6 @@ function animate() {
     requestAnimationFrame(animate);
 }
 
-const cards = document.querySelectorAll('.timer-card, .alarm-card, .clock-card, .stopwatch-card');
+const cards = document.querySelectorAll('.timer-card, .alarm-card, .clock-card, .stopwatch-card, .analog-clock');
 
 animate();

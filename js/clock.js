@@ -1,5 +1,25 @@
+const hourHand = document.getElementById('hour-hand');
+const minuteHand = document.getElementById('minute-hand');
+const secondHand = document.getElementById('second-hand');
+
+function updateAnalogClock(now) {
+    const seconds = now.getSeconds();
+    const minutes = now.getMinutes();
+    const hours = now.getHours();
+
+    const secondsDegrees = (seconds * 6);
+    const minutesDegrees = (minutes * 6) + (seconds * 0.1);
+    const hoursDegrees = ((hours % 12) * 30) + (minutes * 0.5); 
+
+    secondHand.style.transform = `rotate(${secondsDegrees}deg)`;
+    minuteHand.style.transform = `rotate(${minutesDegrees}deg)`;
+    hourHand.style.transform = `rotate(${hoursDegrees}deg)`;
+}
+
 function updateClocks() {
     const now = new Date();
+
+    updateAnalogClock(now);
 
     const formatTime = (date, timeZone) => {
         return new Intl.DateTimeFormat('en-US', {

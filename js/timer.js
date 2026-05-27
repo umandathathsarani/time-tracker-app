@@ -1,7 +1,9 @@
+const daysInput = document.getElementById('days-input');
 const hoursInput = document.getElementById('hours-input');
 const minutesInput = document.getElementById('minutes-input');
 const secondsInput = document.getElementById('seconds-input');
 
+const daysDisplay = document.getElementById('days-display');
 const hoursDisplay = document.getElementById('hours-display');
 const minutesDisplay = document.getElementById('minutes-display');
 const secondsDisplay = document.getElementById('seconds-display');
@@ -22,10 +24,12 @@ function formatTime(time) {
 }
 
 function updateDisplay() {
-    const h = Math.floor(totalSeconds / 3600);
+    const d = Math.floor(totalSeconds / 86400);
+    const h = Math.floor((totalSeconds % 86400) / 3600);
     const m = Math.floor((totalSeconds % 3600) / 60);
     const s = totalSeconds % 60;
 
+    daysDisplay.textContent = formatTime(d);
     hoursDisplay.textContent = formatTime(h);
     minutesDisplay.textContent = formatTime(m);
     secondsDisplay.textContent = formatTime(s);
@@ -33,11 +37,12 @@ function updateDisplay() {
 
 function startTimer() {
     if (!isPaused) {
+        const d = parseInt(daysInput.value) || 0;
         const h = parseInt(hoursInput.value) || 0;
         const m = parseInt(minutesInput.value) || 0;
         const s = parseInt(secondsInput.value) || 0;
         
-        totalSeconds = (h * 3600) + (m * 60) + s;
+        totalSeconds = (d * 86400) + (h * 3600) + (m * 60) + s;
     }
 
     if (totalSeconds <= 0) return;
@@ -79,6 +84,7 @@ function resetTimer() {
     isPaused = false;
     totalSeconds = 0;
 
+    daysInput.value = '';
     hoursInput.value = '';
     minutesInput.value = '';
     secondsInput.value = '';

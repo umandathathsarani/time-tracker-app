@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Timer - Time Tracker</title>
     
-    <link rel="icon" type="image/png" href="assets/icons/paws.png">
+    <link rel="icon" type="image/png" href="assets/icons/favicon.png">
     
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="css/themes.css">
@@ -33,7 +33,9 @@
         
         <div class="timer-card">
             <div id="input-mode" class="timer-display">
-                <input type="number" id="hours-input" placeholder="00" min="0" max="99">
+                <input type="number" id="days-input" placeholder="00" min="0" max="999">
+                <span class="colon">:</span>
+                <input type="number" id="hours-input" placeholder="00" min="0" max="23">
                 <span class="colon">:</span>
                 <input type="number" id="minutes-input" placeholder="00" min="0" max="59">
                 <span class="colon">:</span>
@@ -41,6 +43,8 @@
             </div>
 
             <div id="countdown-mode" class="timer-display" style="display: none;">
+                <span id="days-display">00</span>
+                <span class="colon">:</span>
                 <span id="hours-display">00</span>
                 <span class="colon">:</span>
                 <span id="minutes-display">00</span>

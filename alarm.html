@@ -11,6 +11,8 @@
     <link rel="stylesheet" href="css/alarm.css">
 </head>
 <body>
+    <canvas id="glitter-canvas"></canvas>
+
     <nav class="navbar">
         <div class="nav-links">
             <a href="index.html"><i class="fa-solid fa-earth-americas"></i> Clock</a>
@@ -31,8 +33,8 @@
             <div class="current-time-display" id="current-time-display">00:00:00</div>
             
             <div class="alarm-input-group">
-                <label for="alarm-time-input" class="visually-hidden">Alarm time</label>
-                <input type="time" id="alarm-time-input" required>
+                <label for="alarm-time-input" style="position:absolute;left:-9999px;">Alarm time</label>
+                <input type="time" id="alarm-time-input" required title="Set alarm time" placeholder="HH:MM" aria-label="Alarm time">
                 <button id="add-alarm-btn" class="control-btn primary">
                     <i class="fa-solid fa-plus"></i> Add Alarm
                 </button>
@@ -44,5 +46,6 @@
 
     <script src="js/theme.js"></script>
     <script src="js/alarm.js"></script>
+    <script src="js/glitter.js"></script>
 </body>
 </html>

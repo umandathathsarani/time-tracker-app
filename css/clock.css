@@ -1,0 +1,46 @@
+.clock-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+}
+
+.clock-card {
+    background-color: var(--nav-bg);
+    border: 1px solid var(--border-color);
+    border-radius: 12px;
+    padding: 2.5rem 1.5rem;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+    transition: transform 0.2s ease, border-color 0.3s ease, background-color 0.3s ease;
+}
+
+.clock-card:hover {
+    transform: translateY(-5px);
+    border-color: var(--accent-color);
+}
+
+.clock-card h2 {
+    font-size: 1.2rem;
+    color: var(--nav-text);
+    margin-bottom: 1rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.clock-card .time {
+    font-size: 3rem;
+    font-weight: bold;
+    color: var(--accent-color);
+    font-family: 'Courier New', Courier, monospace; 
+    margin-bottom: 0.5rem;
+    transition: color 0.3s ease;
+}
+
+.clock-card .date {
+    font-size: 1rem;
+    color: var(--text-color);
+}
+
+.clock-card.local {
+    border: 2px solid var(--accent-color);
+}

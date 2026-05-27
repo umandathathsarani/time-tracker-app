@@ -28,8 +28,34 @@
         </button>
     </nav>
 
-    <main class="container">
-        <h1>World Clock</h1>
+<main class="container">
+        <h1 style="margin-bottom: 2rem; color: var(--text-color);">World Clock</h1>
+        
+        <div class="clock-grid">
+            <div class="clock-card local">
+                <h2>Local Time</h2>
+                <div class="time" id="local-time">00:00:00</div>
+                <div class="date" id="local-date">Loading...</div>
+            </div>
+
+            <div class="clock-card">
+                <h2>New York</h2>
+                <div class="time" id="ny-time">00:00:00</div>
+                <div class="date" id="ny-date">Loading...</div>
+            </div>
+
+            <div class="clock-card">
+                <h2>London</h2>
+                <div class="time" id="london-time">00:00:00</div>
+                <div class="date" id="london-date">Loading...</div>
+            </div>
+
+            <div class="clock-card">
+                <h2>Tokyo</h2>
+                <div class="time" id="tokyo-time">00:00:00</div>
+                <div class="date" id="tokyo-date">Loading...</div>
+            </div>
+        </div>
     </main>
 
     <script src="js/theme.js"></script>

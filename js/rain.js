@@ -79,15 +79,13 @@ for (let i = 0; i < particleCount; i++) {
 function animate() {
     ctx.clearRect(0, 0, canvas.width, canvas.height);
 
-    if (document.body.getAttribute('data-theme') === 'secret') {
-        const timerCard = document.querySelector('.timer-card');
-        const cardBounds = timerCard ? timerCard.getBoundingClientRect() : null;
+    const timerCard = document.querySelector('.timer-card');
+    const cardBounds = timerCard ? timerCard.getBoundingClientRect() : null;
 
-        particles.forEach(particle => {
-            particle.update(cardBounds);
-            particle.draw();
-        });
-    }
+    particles.forEach(particle => {
+        particle.update(cardBounds);
+        particle.draw();
+    });
 
     requestAnimationFrame(animate);
 }

@@ -2,8 +2,8 @@ const canvas = document.getElementById('rain-canvas');
 const ctx = canvas.getContext('2d');
 
 let particles = [];
-const particleCount = 60;
-const symbols = ['🐞', '🐈‍⬛'];
+const particleCount = 75; 
+const symbols = ['🐞', '🐈‍⬛']; 
 
 function resizeCanvas() {
     canvas.width = window.innerWidth;
@@ -23,21 +23,20 @@ class Particle {
         this.y = -50; 
         this.size = Math.random() * 15 + 20; 
         this.symbol = symbols[Math.floor(Math.random() * symbols.length)];
-        this.speedY = Math.random() * 2 + 2;
-        this.speedX = (Math.random() - 0.5) * 1.5; 
+        this.speedY = Math.random() * 4 + 5; 
+        this.speedX = (Math.random() - 0.5) * 2; 
         this.rotation = Math.random() * 360;
-        this.rotationSpeed = (Math.random() - 0.5) * 2;
+        this.rotationSpeed = (Math.random() - 0.5) * 5;
     }
 
     update(cardBounds) {
         this.y += this.speedY;
         this.x += this.speedX;
         this.rotation += this.rotationSpeed;
-
-        this.speedY += 0.05; 
+        
+        this.speedY += 0.15; 
 
         if (cardBounds) {
-
             const pad = 10; 
             if (
                 this.x > cardBounds.left - pad && 
@@ -45,13 +44,13 @@ class Particle {
                 this.y > cardBounds.top - pad && 
                 this.y < cardBounds.bottom + pad
             ) {
-                this.speedY = -this.speedY * 0.5; 
+                this.speedY = -this.speedY * 0.6; 
                 this.y = cardBounds.top - pad; 
 
                 if (this.x < cardBounds.left + (cardBounds.width / 2)) {
-                    this.speedX -= 1;
+                    this.speedX -= 1.5; 
                 } else {
-                    this.speedX += 1;
+                    this.speedX += 1.5; 
                 }
             }
         }
@@ -78,10 +77,9 @@ for (let i = 0; i < particleCount; i++) {
 }
 
 function animate() {
+    ctx.clearRect(0, 0, canvas.width, canvas.height);
 
     if (document.body.getAttribute('data-theme') === 'secret') {
-        ctx.clearRect(0, 0, canvas.width, canvas.height);
-
         const timerCard = document.querySelector('.timer-card');
         const cardBounds = timerCard ? timerCard.getBoundingClientRect() : null;
 

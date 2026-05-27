@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alarm - Time Tracker</title>
+    <link rel="icon" type="image/png" href="assets/icons/ladybug (1).png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/themes.css">
+    <link rel="stylesheet" href="css/global.css">
+    <link rel="stylesheet" href="css/alarm.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-links">
+            <a href="index.html"><i class="fa-solid fa-earth-americas"></i> Clock</a>
+            <a href="timer.html"><i class="fa-solid fa-hourglass-half"></i> Timer</a>
+            <a href="alarm.html" class="active"><i class="fa-solid fa-bell"></i> Alarm</a>
+            <a href="stopwatch.html"><i class="fa-solid fa-stopwatch"></i> Stopwatch</a>
+            <a href="pomodoro.html"><i class="fa-solid fa-brain"></i> Pomodoro</a>
+        </div>
+        <button id="theme-toggle" class="theme-btn">
+            <i class="fa-solid fa-user-secret"></i> Toggle Identity
+        </button>
+    </nav>
+
+    <main class="container">
+        <h1 style="margin-bottom: 2rem; color: var(--text-color);">Alarm Clock</h1>
+        
+        <div class="alarm-card">
+            <div class="current-time-display" id="current-time-display">00:00:00</div>
+            
+            <div class="alarm-input-group">
+                <label for="alarm-time-input" class="visually-hidden">Alarm time</label>
+                <input type="time" id="alarm-time-input" required>
+                <button id="add-alarm-btn" class="control-btn primary">
+                    <i class="fa-solid fa-plus"></i> Add Alarm
+                </button>
+            </div>
+
+            <div class="alarms-list" id="alarms-list"></div>
+        </div>
+    </main>
+
+    <script src="js/theme.js"></script>
+    <script src="js/alarm.js"></script>
+</body>
+</html>

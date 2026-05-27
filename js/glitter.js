@@ -35,26 +35,29 @@ class Glitter {
         this.twinkleSpeed = Math.random() * 0.05 + 0.02;
     }
 
-    update(cardBounds) {
+    update(cardBoundsArray) {
         this.y += this.speedY;
         this.x += this.speedX;
         this.life += this.twinkleSpeed;
-        
-        if (cardBounds) {
-            const pad = 5;
-            if (
-                this.x > cardBounds.left - pad && 
-                this.x < cardBounds.right + pad && 
-                this.y > cardBounds.top - pad && 
-                this.y < cardBounds.bottom + pad
-            ) {
-                this.speedY = -this.speedY * 0.5;
-                this.y = cardBounds.top - pad;
 
-                if (this.x < cardBounds.left + (cardBounds.width / 2)) {
-                    this.speedX -= 0.5;
-                } else {
-                    this.speedX += 0.5;
+        if (cardBoundsArray && cardBoundsArray.length > 0) {
+            const pad = 5;
+            for (let bounds of cardBoundsArray) {
+                if (
+                    this.x > bounds.left - pad && 
+                    this.x < bounds.right + pad && 
+                    this.y > bounds.top - pad && 
+                    this.y < bounds.bottom + pad
+                ) {
+                    this.speedY = -this.speedY * 0.5; 
+                    this.y = bounds.top - pad;
+
+                    if (this.x < bounds.left + (bounds.width / 2)) {
+                        this.speedX -= 0.5; 
+                    } else {
+                        this.speedX += 0.5;
+                    }
+                    break; 
                 }
             }
         }
@@ -84,11 +87,11 @@ for (let i = 0; i < particleCount; i++) {
 function animate() {
     ctx.clearRect(0, 0, canvas.width, canvas.height);
 
-    const alarmCard = document.querySelector('.alarm-card');
-    const cardBounds = alarmCard ? alarmCard.getBoundingClientRect() : null;
+    const cards = document.querySelectorAll('.timer-card, .alarm-card, .clock-card');
+    const cardBoundsArray = Array.from(cards).map(card => card.getBoundingClientRect());
 
     particles.forEach(particle => {
-        particle.update(cardBounds);
+        particle.update(cardBoundsArray);
         particle.draw();
     });
 

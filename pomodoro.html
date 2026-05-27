@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pomodoro - Time Tracker</title>
+    <link rel="icon" type="image/png" href="assets/icons/ladybug (2).png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/themes.css">
+    <link rel="stylesheet" href="css/global.css">
+    <link rel="stylesheet" href="css/pomodoro.css">
+</head>
+<body>
+    <canvas id="glitter-canvas"></canvas>
+
+    <nav class="navbar">
+        <div class="nav-links">
+            <a href="index.html"><i class="fa-solid fa-earth-americas"></i> Clock</a>
+            <a href="timer.html"><i class="fa-solid fa-hourglass-half"></i> Timer</a>
+            <a href="alarm.html"><i class="fa-solid fa-bell"></i> Alarm</a>
+            <a href="stopwatch.html"><i class="fa-solid fa-stopwatch"></i> Stopwatch</a>
+            <a href="pomodoro.html" class="active"><i class="fa-solid fa-brain"></i> Pomodoro</a>
+        </div>
+        <button id="theme-toggle" class="theme-btn">
+            <i class="fa-solid fa-user-secret"></i> Toggle Identity
+        </button>
+    </nav>
+
+    <main class="container">
+        <h1 style="margin-bottom: 2rem; color: var(--text-color);">Pomodoro Timer</h1>
+        
+        <div class="pomodoro-card">
+            <div class="mode-indicator">
+                <span id="mode-text">Focus Time</span>
+                <div class="session-dots" id="session-dots">
+                    <span class="dot empty"></span>
+                    <span class="dot empty"></span>
+                    <span class="dot empty"></span>
+                    <span class="dot empty"></span>
+                </div>
+            </div>
+
+            <div class="pomodoro-display">
+                <span id="pom-min">25</span><span class="colon">:</span><span id="pom-sec">00</span>
+            </div>
+            
+            <div class="pomodoro-controls">
+                <button id="pom-start-btn" class="control-btn primary"><i class="fa-solid fa-play"></i> Start</button>
+                <button id="pom-pause-btn" class="control-btn secondary" style="display: none;"><i class="fa-solid fa-pause"></i> Pause</button>
+                <button id="pom-skip-btn" class="control-btn secondary"><i class="fa-solid fa-forward-step"></i> Skip</button>
+                <button id="pom-reset-btn" class="control-btn danger"><i class="fa-solid fa-rotate-left"></i> Reset</button>
+            </div>
+        </div>
+    </main>
+
+    <script src="js/theme.js"></script>
+    <script src="js/pomodoro.js"></script>
+    <script src="js/glitter.js"></script>
+</body>
+</html>

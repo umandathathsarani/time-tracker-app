@@ -1,0 +1,110 @@
+.pomodoro-card {
+    background-color: var(--nav-bg);
+    border: 1px solid var(--border-color);
+    border-radius: 12px;
+    padding: 3rem 2rem;
+    max-width: 600px;
+    margin: 0 auto;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+    text-align: center;
+}
+
+.mode-indicator {
+    margin-bottom: 2rem;
+}
+
+#mode-text {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: var(--nav-text);
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    display: block;
+    margin-bottom: 1rem;
+    transition: color 0.3s ease;
+}
+
+.session-dots {
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+}
+
+.dot {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background-color: var(--accent-color);
+    transition: all 0.3s ease;
+}
+
+.dot.empty {
+    background-color: transparent;
+    border: 2px solid var(--border-color);
+}
+
+.pomodoro-display {
+    font-size: 6rem;
+    font-weight: bold;
+    color: var(--accent-color);
+    font-family: 'Courier New', Courier, monospace;
+    margin-bottom: 3rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: color 0.3s ease;
+}
+
+.pomodoro-display .colon {
+    color: var(--text-color);
+    margin: 0 10px;
+}
+
+.pomodoro-controls {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.control-btn {
+    padding: 1rem 2rem;
+    font-size: 1.1rem;
+    font-weight: bold;
+    border-radius: 8px;
+    cursor: pointer;
+    border: none;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    transition: all 0.2s ease;
+}
+
+.control-btn.primary {
+    background-color: var(--accent-color);
+    color: var(--bg-color);
+}
+
+.control-btn.primary:hover {
+    background-color: var(--accent-hover);
+}
+
+.control-btn.secondary {
+    background-color: transparent;
+    border: 2px solid var(--accent-color);
+    color: var(--accent-color);
+}
+
+.control-btn.secondary:hover {
+    background-color: var(--accent-color);
+    color: var(--bg-color);
+}
+
+.control-btn.danger {
+    background-color: transparent;
+    border: 2px solid var(--text-color);
+    color: var(--text-color);
+}
+
+.control-btn.danger:hover {
+    background-color: var(--border-color);
+}

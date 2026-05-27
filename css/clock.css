@@ -44,3 +44,51 @@
 .clock-card.local {
     border: 2px solid var(--accent-color);
 }
+
+.card-local {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.85), rgba(0, 0, 0, 0.85)), url('https://flagcdn.com/w640/lk.png');
+    background-size: cover;
+    background-position: center;
+}
+
+.card-ny {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.85), rgba(0, 0, 0, 0.85)), url('https://flagcdn.com/w640/us.png');
+    background-size: cover;
+    background-position: center;
+}
+
+.card-london {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.85), rgba(0, 0, 0, 0.85)), url('https://flagcdn.com/w640/gb.png');
+    background-size: cover;
+    background-position: center;
+}
+
+.card-tokyo {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.85), rgba(0, 0, 0, 0.85)), url('https://flagcdn.com/w640/jp.png');
+    background-size: cover;
+    background-position: center;
+}
+
+.card-thailand {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.85), rgba(0, 0, 0, 0.85)), url('https://flagcdn.com/w640/th.png');
+    background-size: cover;
+    background-position: center;
+}
+
+.card-china {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.85), rgba(0, 0, 0, 0.85)), url('https://flagcdn.com/w640/cn.png');
+    background-size: cover;
+    background-position: center;
+}
+
+.card-korea {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.85), rgba(0, 0, 0, 0.85)), url('https://flagcdn.com/w640/kr.png');
+    background-size: cover;
+    background-position: center;
+}
+
+.card-la {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.85), rgba(0, 0, 0, 0.85)), url('https://flagcdn.com/w640/us.png');
+    background-size: cover;
+    background-position: center;
+}

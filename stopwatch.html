@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stopwatch - Time Tracker</title>
+    <link rel="icon" type="image/png" href="assets/icons/cat.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/themes.css">
+    <link rel="stylesheet" href="css/global.css">
+    <link rel="stylesheet" href="css/stopwatch.css">
+</head>
+<body>
+    <canvas id="glitter-canvas"></canvas>
+
+    <nav class="navbar">
+        <div class="nav-links">
+            <a href="index.html"><i class="fa-solid fa-earth-americas"></i> Clock</a>
+            <a href="timer.html"><i class="fa-solid fa-hourglass-half"></i> Timer</a>
+            <a href="alarm.html"><i class="fa-solid fa-bell"></i> Alarm</a>
+            <a href="stopwatch.html" class="active"><i class="fa-solid fa-stopwatch"></i> Stopwatch</a>
+            <a href="pomodoro.html"><i class="fa-solid fa-brain"></i> Pomodoro</a>
+        </div>
+        <button id="theme-toggle" class="theme-btn">
+            <i class="fa-solid fa-user-secret"></i> Toggle Identity
+        </button>
+    </nav>
+
+    <main class="container">
+        <h1 style="margin-bottom: 2rem; color: var(--text-color);">Stopwatch</h1>
+        
+        <div class="stopwatch-card">
+            <div class="stopwatch-display" id="stopwatch-display">
+                <span id="sw-min">00</span><span class="colon">:</span><span id="sw-sec">00</span><span class="colon">.</span><span id="sw-ms" class="ms">00</span>
+            </div>
+            
+            <div class="stopwatch-controls">
+                <button id="sw-start-btn" class="control-btn primary"><i class="fa-solid fa-play"></i> Start</button>
+                <button id="sw-lap-btn" class="control-btn secondary" disabled><i class="fa-solid fa-flag"></i> Lap</button>
+                <button id="sw-reset-btn" class="control-btn danger" disabled><i class="fa-solid fa-rotate-left"></i> Reset</button>
+            </div>
+
+            <div class="laps-container">
+                <ul class="laps-list" id="laps-list"></ul>
+            </div>
+        </div>
+    </main>
+
+    <script src="js/theme.js"></script>
+    <script src="js/stopwatch.js"></script>
+    <script src="js/glitter.js"></script>
+</body>
+</html>

@@ -1,0 +1,118 @@
+.stopwatch-card {
+    background-color: var(--nav-bg);
+    border: 1px solid var(--border-color);
+    border-radius: 12px;
+    padding: 3rem 2rem;
+    max-width: 600px;
+    margin: 0 auto;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+    text-align: center;
+}
+
+.stopwatch-display {
+    font-size: 5rem;
+    font-weight: bold;
+    color: var(--accent-color);
+    font-family: 'Courier New', Courier, monospace;
+    margin-bottom: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: baseline;
+}
+
+.stopwatch-display .colon {
+    color: var(--text-color);
+    margin: 0 5px;
+}
+
+.stopwatch-display .ms {
+    font-size: 3rem;
+    color: var(--nav-text);
+}
+
+.stopwatch-controls {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-bottom: 2rem;
+    padding-bottom: 2rem;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.control-btn {
+    padding: 1rem 2rem;
+    font-size: 1.1rem;
+    font-weight: bold;
+    border-radius: 8px;
+    cursor: pointer;
+    border: none;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    transition: all 0.2s ease;
+}
+
+.control-btn:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+.control-btn.primary {
+    background-color: var(--accent-color);
+    color: var(--bg-color);
+}
+
+.control-btn.primary:not(:disabled):hover {
+    background-color: var(--accent-hover);
+}
+
+.control-btn.secondary {
+    background-color: transparent;
+    border: 2px solid var(--accent-color);
+    color: var(--accent-color);
+}
+
+.control-btn.secondary:not(:disabled):hover {
+    background-color: var(--accent-color);
+    color: var(--bg-color);
+}
+
+.control-btn.danger {
+    background-color: transparent;
+    border: 2px solid var(--text-color);
+    color: var(--text-color);
+}
+
+.control-btn.danger:not(:disabled):hover {
+    background-color: var(--border-color);
+}
+
+.laps-container {
+    max-height: 250px;
+    overflow-y: auto;
+    text-align: left;
+}
+
+.laps-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.lap-item {
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem;
+    border-bottom: 1px solid var(--border-color);
+    color: var(--text-color);
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 1.2rem;
+}
+
+.lap-item:last-child {
+    border-bottom: none;
+}
+
+.lap-number {
+    color: var(--nav-text);
+}

@@ -4,7 +4,7 @@
 
 *A feature-rich, responsive web-based time management application featuring dual interactive themes and custom HTML5 Canvas physics effects.*
 
-[![Netlify Status](https://api.netlify.com/api/v1/badges/a1b2c3d4-e5f6-7890-abcd-ef1234567890/deploy-status)](https://binuri-miraculous-timeflow.netlify.app/)
+[![Netlify Status](https://api.netlify.com/api/v1/badges/7fdbb0c9-7e00-4cca-ba70-54e416d81463/deploy-status)](https://app.netlify.com/projects/binuri-miraculous-timeflow/deploys)
 ![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white)
 ![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white)
 ![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)

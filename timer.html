@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Timer - Time Tracker</title>
+    
+    <link rel="icon" type="image/png" href="assets/icons/paws.png">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/themes.css">
+    <link rel="stylesheet" href="css/global.css">
+    <link rel="stylesheet" href="css/timer.css">
+</head>
+<body>
+
+    <nav class="navbar">
+        <div class="nav-links">
+            <a href="index.html"><i class="fa-solid fa-earth-americas"></i> Clock</a>
+            <a href="timer.html" class="active"><i class="fa-solid fa-hourglass-half"></i> Timer</a>
+            <a href="alarm.html"><i class="fa-solid fa-bell"></i> Alarm</a>
+            <a href="stopwatch.html"><i class="fa-solid fa-stopwatch"></i> Stopwatch</a>
+            <a href="pomodoro.html"><i class="fa-solid fa-brain"></i> Pomodoro</a>
+        </div>
+        
+        <button id="theme-toggle" class="theme-btn">
+            <i class="fa-solid fa-user-secret"></i> Toggle Identity
+        </button>
+    </nav>
+
+    <main class="container">
+        <h1 style="margin-bottom: 2rem; color: var(--text-color);">Countdown Timer</h1>
+        
+        <div class="timer-card">
+            <div id="input-mode" class="timer-display">
+                <input type="number" id="hours-input" placeholder="00" min="0" max="99">
+                <span class="colon">:</span>
+                <input type="number" id="minutes-input" placeholder="00" min="0" max="59">
+                <span class="colon">:</span>
+                <input type="number" id="seconds-input" placeholder="00" min="0" max="59">
+            </div>
+
+            <div id="countdown-mode" class="timer-display" style="display: none;">
+                <span id="hours-display">00</span>
+                <span class="colon">:</span>
+                <span id="minutes-display">00</span>
+                <span class="colon">:</span>
+                <span id="seconds-display">00</span>
+            </div>
+
+            <div class="timer-controls">
+                <button id="start-btn" class="control-btn primary"><i class="fa-solid fa-play"></i> Start</button>
+                <button id="pause-btn" class="control-btn secondary" style="display: none;"><i class="fa-solid fa-pause"></i> Pause</button>
+                <button id="reset-btn" class="control-btn danger" style="display: none;"><i class="fa-solid fa-rotate-left"></i> Reset</button>
+            </div>
+        </div>
+    </main>
+
+    <script src="js/theme.js"></script>
+    <script src="js/timer.js"></script>
+</body>
+</html>

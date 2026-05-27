@@ -9,11 +9,11 @@
 }
 
 [data-theme="secret"] {
-    --bg-color: #0f172a;
+    --bg-color: #111111;
     --text-color: #f8fafc;
-    --nav-bg: #1e293b;
-    --nav-text: #94a3b8;
-    --accent-color: #10b981;
-    --accent-hover: #059669;
-    --border-color: #334155;
+    --nav-bg: #000000;
+    --nav-text: #a1a1aa;
+    --accent-color: #ef233c;
+    --accent-hover: #d90429;
+    --border-color: #27272a;
 }
